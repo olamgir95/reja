@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,12 @@
   "bugs": {
     "url": "https://github.com/olamgir95/reja/issues"
   },
-  "homepage": "https://github.com/olamgir95/reja#readme"
+  "homepage": "https://github.com/olamgir95/reja#readme",
+  "dependencies": {
+    "inquirer": "^9.2.11",
+    "moment": "^2.29.4",
+    "require": "^2.4.20",
+    "uuid": "^9.0.1",
+    "validator": "^13.11.0"
+  }
 }
