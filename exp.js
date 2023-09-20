@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
-const http = require('http');
+const res = require("express/lib/response");
+const http = require("http");
 
 //1 kirish code
 app.use(express.static("public"));
@@ -10,16 +11,16 @@ app.use(express.urlencoded({ extended: true }));
 //2 session code
 //3 views code
 app.set("views", "views");
-app.set("views engine", "ejs");
+app.set("view engine", "ejs");
 
 //4 routing code
-app.get("/", function (req, res) {
-  res.end("HELLO WORLD");
+app.post("/create-item", (req, res) => {
+  console.log(req.body);
+  res.json({test:'succsess'})
 });
-app.get("/gift", function (req, res) {
-    res.end("siz sovgani qolga kiritdingiz");
-  });
-  
+app.get("/", function (req, res) {
+  res.render("harid");
+});
 
 const server = http.createServer(app);
 let PORT = 3000;
