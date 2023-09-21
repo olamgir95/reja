@@ -24,6 +24,6 @@ const test2 = validator.isInt("98798");
 console.log(test);
 console.log(test2);
 
-const { v4: uuidv4 } = require('uuid');
+const { v4: uuidv4 } = require("uuid");
 const random = uuidv4();
 console.log(random);
