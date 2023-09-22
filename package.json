@@ -6,7 +6,8 @@
   "type": "commonjs",
   "scripts": {
     "start": "node exp.js",
-    "dev": "nodemon exp.js"
+    "dev": "nodemon exp.js",
+    "train": "nodemon 19-dars.js"
   },
   "repository": {
     "type": "git",
@@ -24,9 +25,9 @@
     "express": "^4.18.2",
     "inquirer": "^9.2.11",
     "moment": "^2.29.4",
+    "nodemon": "^3.0.1",
     "require": "^2.4.20",
     "uuid": "^9.0.1",
-    "validator": "^13.11.0",
-    "nodemon": "^3.0.1"
+    "validator": "^13.11.0"
   }
 }
