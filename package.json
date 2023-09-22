@@ -2,11 +2,11 @@
   "name": "reja",
   "version": "1.0.0",
   "description": "",
-  "main": "exp.js",
+  "main": "harid.js",
   "type": "commonjs",
   "scripts": {
     "start": "node exp.js",
-    "dev":"nodemon exp.js"
+    "dev": "nodemon exp.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,7 @@
     "moment": "^2.29.4",
     "require": "^2.4.20",
     "uuid": "^9.0.1",
-    "validator": "^13.11.0"
+    "validator": "^13.11.0",
+    "nodemon": "^3.0.1"
   }
 }

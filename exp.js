@@ -16,7 +16,7 @@ app.set("view engine", "ejs");
 //4 routing code
 app.post("/create-item", (req, res) => {
   console.log(req.body);
-  res.json({test:'succsess'})
+  res.json({ test: "succsess" });
 });
 app.get("/", function (req, res) {
   res.render("harid");
