@@ -1,0 +1,17 @@
+{
+  "name": "Olamgir",
+  "profession": "Software Engineer",
+  "age": "27",
+  "residence": "S.Korea",
+  "adress": "S.Korea, Suwon",
+  "languages": ["Uzbek", "Korean", "English"],
+  "skills": ["Html", "Css", "Js", "NodeJs", "React"],
+  "extra_skills": [
+    "Bootstrap",
+    "MaterialUI",
+    "Sass",
+    "Styling",
+    "Git Knowledge"
+  ],
+  "work_place": "IT Company" 
+}
