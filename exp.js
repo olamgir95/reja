@@ -28,7 +28,7 @@ app.post("/create-item", (req, res) => {
   res.json({ test: "succsess" });
 });
 app.get("/author", function (req, res) {
-  res.render("author", {user:user});
+  res.render("author", { user: user });
 });
 
 const server = http.createServer(app);
