@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node exp.js",
     "dev": "nodemon exp.js",
-    "train": "nodemon 19-dars.js"
+    "train": "nodemon async.js"
   },
   "repository": {
     "type": "git",
