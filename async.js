@@ -24,6 +24,8 @@ async function maslahatBering(a) {
     });
   }
 }
+
+//call via then/catch
 // console.log("passed her 0");
 // maslahatBering(25)
 //   .then((data) => {
@@ -34,7 +36,7 @@ async function maslahatBering(a) {
 //   });
 // console.log("passed here 1");
 
-//then/catch
+// async / await
 async function run() {
   let javob = await maslahatBering(20);
   console.log(javob);
