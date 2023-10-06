@@ -57,7 +57,6 @@ app.post("/edit-item", (req, res) => {
 });
 
 app.post("/delete-all", (req, res) => {
-  console.log(req.body);
   if (req.body.delete_all) {
     db.collection("plans").deleteMany(function () {
       res.json({ state: "Hamma rejalar delete bo'ldi" });
