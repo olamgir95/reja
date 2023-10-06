@@ -1,4 +1,3 @@
-
 console.log("browserJs ishga tushdi");
 
 const itemTemplate = (item) => {
@@ -29,16 +28,54 @@ document.getElementById("create-form").addEventListener("submit", function (e) {
     });
 });
 
-
-document.addEventListener("click", function(e){
-  if(e.target.classList.contains("delete-me")){
-   if(confirm("Aniq o'chirmoqchimisiz")){
-    axios.post("/delete-item",{id:e.target.getAttribute("data-id")}).then((response)=>{
-e.target.parentElement.parentElement.remove()
-    }).catch((err)=>{
-console.log("qaytadan urinib ko'ring");
-    })
-   }
+document.addEventListener("click", function (e) {
+  if (e.target.classList.contains("delete-me")) {
+    if (confirm("Aniq o'chirmoqchimisiz")) {
+      axios
+        .post("/delete-item", { id: e.target.getAttribute("data-id") })
+        .then((response) => {
+          e.target.parentElement.parentElement.remove();
+        })
+        .catch((err) => {
+          console.log("qaytadan urinib ko'ring");
+        });
+    }
   }
 
-})
+  if (e.target.classList.contains("edit-me")) {
+    let userInput = prompt(
+      "O'zgartirish kiriting",
+      e.target.parentElement.parentElement.querySelector(".item-text").innerHTML
+    );
+
+    if (userInput) {
+      axios
+        .post("/edit-item", {
+          id: e.target.getAttribute("data-id"),
+          new_input: userInput,
+        })
+        .then((response) => {
+          console.log(response);
+          e.target.parentElement.parentElement.querySelector(
+            ".item-text"
+          ).innerHTML = userInput;
+        })
+        .catch((err) => {
+          console.log("qaytadan urinib ko'ring");
+        });
+    }
+  }
+});
+
+document.getElementById("clean-all").addEventListener("click", function () {
+  axios
+    .post("/delete-all", { delete_all: true })
+    .then((response) => {
+      alert(response.data.state);
+      document.location.reload();
+    })
+    .catch((err) => {
+      alert("Qayta urinib ko'ring");
+      console.log("error");
+    });
+});
