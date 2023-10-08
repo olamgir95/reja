@@ -72,7 +72,7 @@ document.getElementById("clean-all").addEventListener("click", function () {
     .post("/delete-all", { delete_all: true })
     .then((response) => {
       alert(response.data.state);
-      document.location.reload();
+      document.getElementById("item-list").remove();
     })
     .catch((err) => {
       alert("Qayta urinib ko'ring");
